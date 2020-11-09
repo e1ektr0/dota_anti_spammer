@@ -31,6 +31,11 @@ namespace DotaAntiSpammerNet.Controls.Hero
                 return;
             }
             Image.Source = new BitmapImage(new Uri($"../../icons/{instanceHero.Name}.png", UriKind.Relative));
+            var contains = instanceHero.Name.Contains("void");
+            if (contains)
+            {
+                Console.WriteLine();
+            }
             Games.Text = hero.Games.ToString();
             WinRate.Text = $"{(int) hero.WinRate}%";
             WinRate.Foreground = hero.WinRate > 50 ? Brushes.Green : Brushes.Red;

@@ -199,6 +199,7 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Resource Include="icons\void_spirit.png" />
     <Resource Include="small\abaddon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -311,6 +312,7 @@
     <Resource Include="small\venomancer.png" />
     <Resource Include="small\viper.png" />
     <Resource Include="small\visage.png" />
+    <Resource Include="small\void_spirit.png" />
     <Resource Include="small\warlock.png" />
     <Resource Include="small\weaver.png" />
     <Resource Include="small\windrunner.png" />
@@ -444,7 +446,6 @@
     <Resource Include="icons\zuus.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons\void_spirit.png" />
     <Resource Include="icons\dota_anti_spam.png" />
     <Resource Include="dota_anti_spam.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
