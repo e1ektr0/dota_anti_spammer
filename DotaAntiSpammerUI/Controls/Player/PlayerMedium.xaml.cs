@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Media;
 using DotaAntiSpammerNet.Controls.Hero;
 using DotaAntiSpammerNet.models;
@@ -37,7 +38,6 @@ namespace DotaAntiSpammerNet.Controls.Player
             Border.BorderBrush = new SolidColorBrush(PlayerColors.Colors[i]);
             for (var j = 0; j < _heroes.Count; j++)
             {
-
                 if (player.Heroes.Count > j)
                 {
 
@@ -53,6 +53,14 @@ namespace DotaAntiSpammerNet.Controls.Player
 
             Games.Text = $"{player.TotalGames}";
             WinRate.Text = $"{player.WinRate:0.00}%";
+
+            PartyBorder.BorderBrush = Brushes.Transparent;
+        }
+
+        public void IniParty(int i)
+        {
+            PartyBorder.BorderBrush = new SolidColorBrush(PlayerColors.Colors[9-i]);
+            PartyBorder.Visibility = Visibility.Visible;
         }
     }
 }

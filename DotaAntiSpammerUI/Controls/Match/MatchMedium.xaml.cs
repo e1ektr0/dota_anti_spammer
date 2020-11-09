@@ -32,7 +32,7 @@ namespace DotaAntiSpammerNet.Controls.Match
                 var orderByDescending = enemy.Where(n => n != null)
                     .SelectMany(n => n.Heroes.Select(x => new {points = x.WinRate * x.Games, heroId = x.Id}))
                     .OrderByDescending(n => n.points).ToList();
-                BansX.Ini(orderByDescending.Select(n=>n.heroId).Take(3).ToList());
+                BansX.Ini(orderByDescending.Select(n => n.heroId).Take(3).ToList());
                 border.BorderBrush = Brushes.Red;
             }
             else
@@ -53,11 +53,36 @@ namespace DotaAntiSpammerNet.Controls.Match
                 Player14,
                 Player15
             };
+            var partyDictionary = CalculateParty(match);
             for (var i = 0; i < players.Count; i++)
             {
                 var matchPlayer = match.Players[i];
                 players[i].Ini(i, matchPlayer);
+                if (matchPlayer!=null && partyDictionary.ContainsKey(matchPlayer.AccountId))
+                    players[i].IniParty(partyDictionary[matchPlayer.AccountId]);
             }
+        }
+
+        private static Dictionary<long, int> CalculateParty(DotaAntiSpammerCommon.Models.Match match)
+        {
+            var partyDictionary = new Dictionary<long, int>();
+            var partyIndex = 0;
+            if (match.Players == null)
+                return partyDictionary;
+            foreach (var matchPlayer in match.Players.Where(n => n?.Party != null))
+            {
+                if (partyDictionary.ContainsKey(matchPlayer.AccountId))
+                    continue;
+                var partyAccounts = matchPlayer.Party.Where(n => match.Players.Any(u => u.AccountId == n));
+                foreach (var account in partyAccounts)
+                {
+                    partyDictionary.Add(account, partyIndex);
+                }
+
+                partyIndex++;
+            }
+
+            return partyDictionary;
         }
     }
 }

@@ -31,6 +31,7 @@
                     Background="Gray"
                     BorderBrush="Black"
                     BorderThickness="1">
+                
                 <TextBlock HorizontalAlignment="Center" Name="PickStage" Margin="0" Padding="0" VerticalAlignment="Top"
                            FontSize="9" FontWeight="Bold">
                     3

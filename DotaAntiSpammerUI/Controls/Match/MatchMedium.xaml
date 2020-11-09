@@ -7,14 +7,14 @@
              xmlns:bans="clr-namespace:DotaAntiSpammerNet.Controls.Bans"
              mc:Ignorable="d"
              Width="1500"
-             Height="110">
+             Height="120">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="*" />
             <ColumnDefinition Width="264" Name="MidColumn" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" BorderThickness="1" Name="BorderA">
+        <Border Grid.Column="0" BorderThickness="0 5 5 0" Name="BorderA">
             <StackPanel Orientation="Horizontal">
                 <player:PlayerMedium x:Name="Player01"  />
                 <player:PlayerMedium x:Name="Player02" />
@@ -24,7 +24,7 @@
             </StackPanel>
         </Border>
         <bans:Bans Grid.Column="1" x:Name="BansX" />
-        <Border Grid.Column="2" BorderThickness="1" Name="BorderB">
+        <Border Grid.Column="2" BorderThickness="0 5 5 0" Name="BorderB">
             <StackPanel Orientation="Horizontal">
                 <player:PlayerMedium x:Name="Player11" />
                 <player:PlayerMedium x:Name="Player12" />

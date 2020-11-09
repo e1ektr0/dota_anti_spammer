@@ -2,9 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>..\..\signature.snk</AssemblyOriginatorKeyFile>
-        <PublicSign>true</PublicSign>
+        <PublicSign>false</PublicSign>
     </PropertyGroup>
 
     <ItemGroup>

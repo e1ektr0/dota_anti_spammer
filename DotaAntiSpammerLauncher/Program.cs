@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text.Json;
 using System.Threading;
@@ -145,7 +146,16 @@ namespace DotaAntiSpammerLauncher
                         PropertyNameCaseInsensitive = true
                     });
                 match.Sort(playerIDs);
-                match.CurrentId = (int)currentId; 
+                match.CurrentId = (int)currentId;
+
+                
+//                match.CurrentId = match.Players[1].AccountId;
+//                match.Players[0].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
+//                match.Players[1].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
+//                match.Players[2].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
+//                match.Players[3].Party = new List<long>{match.Players[3].AccountId, match.Players[4].AccountId};
+//                match.Players[4].Party = new List<long>{match.Players[3].AccountId, match.Players[4].AccountId};
+                
                 window.Dispatcher.Invoke(() => { window.Ini(match); });
             }
             catch (Exception e)
