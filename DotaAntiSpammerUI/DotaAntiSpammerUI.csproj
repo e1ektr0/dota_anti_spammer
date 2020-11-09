@@ -444,6 +444,7 @@
     <Resource Include="icons\zuus.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="icons\void_spirit.png" />
     <Resource Include="icons\dota_anti_spam.png" />
     <Resource Include="dota_anti_spam.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
