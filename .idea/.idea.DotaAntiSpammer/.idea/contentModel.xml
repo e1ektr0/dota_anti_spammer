@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\E1ektr0\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\E1ektr0\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_DotaAntiSpammer.786551479.00" t="ExcludeRecursive" />
+    <e p="C:\Users\E1ektr0\Documents\dota_anti_spammer" t="IncludeFlat">
+      <e p="DotaAntiSpammer.sln" t="IncludeFlat" />
+      <e p="DotaAntiSpammerCommon" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DotaAntiSpammerCommon.csproj" t="IncludeRecursive" />
+        <e p="GlobalConfig.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Hero.cs" t="Include" />
+          <e p="Match.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DotaAntiSpammerCommon.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="DotaAntiSpammerLauncher" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="dota_anti_spam.ico" t="Include" />
+        <e p="DotaAntiSpammerLauncher.csproj" t="IncludeRecursive" />
+        <e p="FileManagement.cs" t="Include" />
+        <e p="LowLevelKeyboardHook.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DotaAntiSpammerUI" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common" t="Include">
+          <e p="FileLogger.cs" t="Include" />
+          <e p="ISerializer.cs" t="Include" />
+          <e p="ISettings.cs" t="Include" />
+          <e p="Log.cs" t="Include" />
+          <e p="Native.cs" t="Include" />
+          <e p="PluginBase.cs" t="Include" />
+          <e p="PluginLoader.cs" t="Include" />
+          <e p="RelativeFile.cs" t="Include" />
+          <e p="SerializableSettings.cs" t="Include" />
+          <e p="TickEngine.cs" t="Include" />
+          <e p="TimeSpanExtensions.cs" t="Include" />
+          <e p="WaitTimer.cs" t="Include" />
+          <e p="WindowConstants.cs" t="Include" />
+          <e p="WindowExtensions.cs" t="Include" />
+          <e p="XmlSerializerEx.cs" t="Include" />
+        </e>
+        <e p="Controls" t="Include">
+          <e p="Bans" t="Include">
+            <e p="Bans.xaml" t="Include" />
+            <e p="Bans.xaml.cs" t="Include" />
+          </e>
+          <e p="Hero" t="Include">
+            <e p="Hero.xaml" t="Include" />
+            <e p="Hero.xaml.cs" t="Include" />
+            <e p="HeroMedium.xaml" t="Include" />
+            <e p="HeroMedium.xaml.cs" t="Include" />
+            <e p="HeroSmall.xaml" t="Include" />
+            <e p="HeroSmall.xaml.cs" t="Include" />
+          </e>
+          <e p="Match" t="Include">
+            <e p="MatchMedium.xaml" t="Include" />
+            <e p="MatchMedium.xaml.cs" t="Include" />
+            <e p="MatchSmall.xaml" t="Include" />
+            <e p="MatchSmall.xaml.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerMedium.xaml" t="Include" />
+            <e p="PlayerMedium.xaml.cs" t="Include" />
+            <e p="PlayerSmall.xaml" t="Include" />
+            <e p="PlayerSmall.xaml.cs" t="Include" />
+          </e>
+        </e>
+        <e p="dota_anti_spam.ico" t="Include" />
+        <e p="DotaAntiSpammerUI.csproj" t="IncludeRecursive" />
+        <e p="heroes.json" t="Include" />
+        <e p="icons" t="Include">
+          <e p="abaddon.png" t="Include" />
+          <e p="abyssal_underlord.png" t="Include" />
+          <e p="alchemist.png" t="Include" />
+          <e p="ancient_apparition.png" t="Include" />
+          <e p="antimage.png" t="Include" />
+          <e p="arc_warden.png" t="Include" />
+          <e p="axe.png" t="Include" />
+          <e p="bane.png" t="Include" />
+          <e p="batrider.png" t="Include" />
+          <e p="beastmaster.png" t="Include" />
+          <e p="bloodseeker.png" t="Include" />
+          <e p="bm_earth.png" t="Include" />
+          <e p="bm_fire.png" t="Include" />
+          <e p="bm_storm.png" t="Include" />
+          <e p="bounty_hunter.png" t="Include" />
+          <e p="brewmaster.png" t="Include" />
+          <e p="bristleback.png" t="Include" />
+          <e p="broodmother.png" t="Include" />
+          <e p="centaur.png" t="Include" />
+          <e p="chaos_knight.png" t="Include" />
+          <e p="chen.png" t="Include" />
+          <e p="clinkz.png" t="Include" />
+          <e p="crystal_maiden.png" t="Include" />
+          <e p="dark_seer.png" t="Include" />
+          <e p="dark_willow.png" t="Include" />
+          <e p="dazzle.png" t="Include" />
+          <e p="death_prophet.png" t="Include" />
+          <e p="disruptor.png" t="Include" />
+          <e p="doom_bringer.png" t="Include" />
+          <e p="dota_anti_spam.png" t="Include" />
+          <e p="dragon_knight.png" t="Include" />
+          <e p="drow_ranger.png" t="Include" />
+          <e p="earth_spirit.png" t="Include" />
+          <e p="earthshaker.png" t="Include" />
+          <e p="elder_titan.png" t="Include" />
+          <e p="ember_spirit.png" t="Include" />
+          <e p="enchantress.png" t="Include" />
+          <e p="enigma.png" t="Include" />
+          <e p="faceless_void.png" t="Include" />
+          <e p="furion.png" t="Include" />
+          <e p="grimstroke.png" t="Include" />
+          <e p="gyrocopter.png" t="Include" />
+          <e p="huskar.png" t="Include" />
+          <e p="invoker.png" t="Include" />
+          <e p="jakiro.png" t="Include" />
+          <e p="juggernaut.png" t="Include" />
+          <e p="keeper_of_the_light.png" t="Include" />
+          <e p="kunkka.png" t="Include" />
+          <e p="legion_commander.png" t="Include" />
+          <e p="leshrac.png" t="Include" />
+          <e p="lich.png" t="Include" />
+          <e p="life_stealer.png" t="Include" />
+          <e p="lina.png" t="Include" />
+          <e p="lion.png" t="Include" />
+          <e p="lone_druid.png" t="Include" />
+          <e p="luna.png" t="Include" />
+          <e p="lycan.png" t="Include" />
+          <e p="magnataur.png" t="Include" />
+          <e p="mars.png" t="Include" />
+          <e p="master_tier.png" t="Include" />
+          <e p="medusa.png" t="Include" />
+          <e p="meepo.png" t="Include" />
+          <e p="mirana.png" t="Include" />
+          <e p="monkey_king.png" t="Include" />
+          <e p="morphling.png" t="Include" />
+          <e p="naga_siren.png" t="Include" />
+          <e p="necrolyte.png" t="Include" />
+          <e p="nevermore.png" t="Include" />
+          <e p="night_stalker.png" t="Include" />
+          <e p="nyx_assassin.png" t="Include" />
+          <e p="obsidian_destroyer.png" t="Include" />
+          <e p="ogre_magi.png" t="Include" />
+          <e p="omniknight.png" t="Include" />
+          <e p="oracle.png" t="Include" />
+          <e p="pangolier.png" t="Include" />
+          <e p="phantom_assassin.png" t="Include" />
+          <e p="phantom_lancer.png" t="Include" />
+          <e p="phoenix.png" t="Include" />
+          <e p="puck.png" t="Include" />
+          <e p="pudge.png" t="Include" />
+          <e p="pugna.png" t="Include" />
+          <e p="queenofpain.png" t="Include" />
+          <e p="rattletrap.png" t="Include" />
+          <e p="razor.png" t="Include" />
+          <e p="riki.png" t="Include" />
+          <e p="rubick.png" t="Include" />
+          <e p="sand_king.png" t="Include" />
+          <e p="shadow_demon.png" t="Include" />
+          <e p="shadow_shaman.png" t="Include" />
+          <e p="shredder.png" t="Include" />
+          <e p="silencer.png" t="Include" />
+          <e p="skeleton_king.png" t="Include" />
+          <e p="skywrath_mage.png" t="Include" />
+          <e p="slardar.png" t="Include" />
+          <e p="slark.png" t="Include" />
+          <e p="snapfire.png" t="Include" />
+          <e p="sniper.png" t="Include" />
+          <e p="spam.png" t="Include" />
+          <e p="spectre.png" t="Include" />
+          <e p="spirit_breaker.png" t="Include" />
+          <e p="storm_spirit.png" t="Include" />
+          <e p="sven.png" t="Include" />
+          <e p="techies.png" t="Include" />
+          <e p="templar_assassin.png" t="Include" />
+          <e p="terrorblade.png" t="Include" />
+          <e p="tidehunter.png" t="Include" />
+          <e p="tinker.png" t="Include" />
+          <e p="tiny.png" t="Include" />
+          <e p="treant.png" t="Include" />
+          <e p="troll_warlord.png" t="Include" />
+          <e p="tusk.png" t="Include" />
+          <e p="undying.png" t="Include" />
+          <e p="ursa.png" t="Include" />
+          <e p="vengefulspirit.png" t="Include" />
+          <e p="venomancer.png" t="Include" />
+          <e p="viper.png" t="Include" />
+          <e p="visage.png" t="Include" />
+          <e p="warlock.png" t="Include" />
+          <e p="weaver.png" t="Include" />
+          <e p="windrunner.png" t="Include" />
+          <e p="winter_wyvern.png" t="Include" />
+          <e p="wisp.png" t="Include" />
+          <e p="witch_doctor.png" t="Include" />
+          <e p="zuus.png" t="Include" />
+        </e>
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="HeroConfig.cs" t="Include" />
+          <e p="HeroConfigAll.cs" t="Include" />
+          <e p="PlayerColors.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="OverlayWindow.xaml" t="Include" />
+        <e p="OverlayWindow.xaml.cs" t="Include" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="small" t="Include">
+          <e p="abaddon.png" t="Include" />
+          <e p="abyssal_underlord.png" t="Include" />
+          <e p="alchemist.png" t="Include" />
+          <e p="ancient_apparition.png" t="Include" />
+          <e p="antimage.png" t="Include" />
+          <e p="arc_warden.png" t="Include" />
+          <e p="axe.png" t="Include" />
+          <e p="bane.png" t="Include" />
+          <e p="batrider.png" t="Include" />
+          <e p="beastmaster.png" t="Include" />
+          <e p="bloodseeker.png" t="Include" />
+          <e p="bounty_hunter.png" t="Include" />
+          <e p="brewmaster.png" t="Include" />
+          <e p="bristleback.png" t="Include" />
+          <e p="broodmother.png" t="Include" />
+          <e p="centaur.png" t="Include" />
+          <e p="chaos_knight.png" t="Include" />
+          <e p="chen.png" t="Include" />
+          <e p="clinkz.png" t="Include" />
+          <e p="crystal_maiden.png" t="Include" />
+          <e p="dark_seer.png" t="Include" />
+          <e p="dark_willow.png" t="Include" />
+          <e p="dazzle.png" t="Include" />
+          <e p="death_prophet.png" t="Include" />
+          <e p="disruptor.png" t="Include" />
+          <e p="doom_bringer.png" t="Include" />
+          <e p="dragon_knight.png" t="Include" />
+          <e p="drow_ranger.png" t="Include" />
+          <e p="earth_spirit.png" t="Include" />
+          <e p="earthshaker.png" t="Include" />
+          <e p="elder_titan.png" t="Include" />
+          <e p="ember_spirit.png" t="Include" />
+          <e p="enchantress.png" t="Include" />
+          <e p="enigma.png" t="Include" />
+          <e p="faceless_void.png" t="Include" />
+          <e p="furion.png" t="Include" />
+          <e p="grimstroke.png" t="Include" />
+          <e p="gyrocopter.png" t="Include" />
+          <e p="huskar.png" t="Include" />
+          <e p="invoker.png" t="Include" />
+          <e p="jakiro.png" t="Include" />
+          <e p="juggernaut.png" t="Include" />
+          <e p="keeper_of_the_light.png" t="Include" />
+          <e p="kunkka.png" t="Include" />
+          <e p="legion_commander.png" t="Include" />
+          <e p="leshrac.png" t="Include" />
+          <e p="lich.png" t="Include" />
+          <e p="life_stealer.png" t="Include" />
+          <e p="lina.png" t="Include" />
+          <e p="lion.png" t="Include" />
+          <e p="lone_druid.png" t="Include" />
+          <e p="luna.png" t="Include" />
+          <e p="lycan.png" t="Include" />
+          <e p="magnataur.png" t="Include" />
+          <e p="mars.png" t="Include" />
+          <e p="medusa.png" t="Include" />
+          <e p="meepo.png" t="Include" />
+          <e p="mirana.png" t="Include" />
+          <e p="monkey_king.png" t="Include" />
+          <e p="morphling.png" t="Include" />
+          <e p="naga_siren.png" t="Include" />
+          <e p="necrolyte.png" t="Include" />
+          <e p="nevermore.png" t="Include" />
+          <e p="night_stalker.png" t="Include" />
+          <e p="nyx_assassin.png" t="Include" />
+          <e p="obsidian_destroyer.png" t="Include" />
+          <e p="ogre_magi.png" t="Include" />
+          <e p="omniknight.png" t="Include" />
+          <e p="oracle.png" t="Include" />
+          <e p="pangolier.png" t="Include" />
+          <e p="phantom_assassin.png" t="Include" />
+          <e p="phantom_lancer.png" t="Include" />
+          <e p="phoenix.png" t="Include" />
+          <e p="puck.png" t="Include" />
+          <e p="pudge.png" t="Include" />
+          <e p="pugna.png" t="Include" />
+          <e p="queenofpain.png" t="Include" />
+          <e p="rattletrap.png" t="Include" />
+          <e p="razor.png" t="Include" />
+          <e p="riki.png" t="Include" />
+          <e p="rubick.png" t="Include" />
+          <e p="sand_king.png" t="Include" />
+          <e p="shadow_demon.png" t="Include" />
+          <e p="shadow_shaman.png" t="Include" />
+          <e p="shredder.png" t="Include" />
+          <e p="silencer.png" t="Include" />
+          <e p="skeleton_king.png" t="Include" />
+          <e p="skywrath_mage.png" t="Include" />
+          <e p="slardar.png" t="Include" />
+          <e p="slark.png" t="Include" />
+          <e p="sniper.png" t="Include" />
+          <e p="spectre.png" t="Include" />
+          <e p="spirit_breaker.png" t="Include" />
+          <e p="storm_spirit.png" t="Include" />
+          <e p="sven.png" t="Include" />
+          <e p="techies.png" t="Include" />
+          <e p="templar_assassin.png" t="Include" />
+          <e p="terrorblade.png" t="Include" />
+          <e p="tidehunter.png" t="Include" />
+          <e p="tinker.png" t="Include" />
+          <e p="tiny.png" t="Include" />
+          <e p="treant.png" t="Include" />
+          <e p="troll_warlord.png" t="Include" />
+          <e p="tusk.png" t="Include" />
+          <e p="undying.png" t="Include" />
+          <e p="ursa.png" t="Include" />
+          <e p="vengefulspirit.png" t="Include" />
+          <e p="venomancer.png" t="Include" />
+          <e p="viper.png" t="Include" />
+          <e p="visage.png" t="Include" />
+          <e p="warlock.png" t="Include" />
+          <e p="weaver.png" t="Include" />
+          <e p="windrunner.png" t="Include" />
+          <e p="winter_wyvern.png" t="Include" />
+          <e p="wisp.png" t="Include" />
+          <e p="witch_doctor.png" t="Include" />
+          <e p="zuus.png" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\E1ektr0\Documents\signature.snk" t="Include" />
+  </component>
+</project>
