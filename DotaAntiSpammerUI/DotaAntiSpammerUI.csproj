@@ -139,6 +139,15 @@
     <Compile Include="Controls\Hero\HeroSmall.xaml.cs">
       <DependentUpon>HeroSmall.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Map\WardLegend.xaml.cs">
+      <DependentUpon>WardLegend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Map\WardMap.xaml.cs">
+      <DependentUpon>WardMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Map\WardsPanel.xaml.cs">
+      <DependentUpon>WardsPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Match\MatchMedium.xaml.cs">
       <DependentUpon>MatchMedium.xaml</DependentUpon>
     </Compile>
@@ -158,6 +167,9 @@
     <Page Include="Controls\Hero\Hero.xaml" />
     <Page Include="Controls\Hero\HeroMedium.xaml" />
     <Page Include="Controls\Hero\HeroSmall.xaml" />
+    <Page Include="Controls\Map\WardLegend.xaml" />
+    <Page Include="Controls\Map\WardMap.xaml" />
+    <Page Include="Controls\Map\WardsPanel.xaml" />
     <Page Include="Controls\Match\MatchMedium.xaml" />
     <Page Include="Controls\Player\PlayerMedium.xaml" />
     <Page Include="MainWindow.xaml">
@@ -447,6 +459,17 @@
   <ItemGroup>
     <Resource Include="icons\dota_anti_spam.png" />
     <Resource Include="dota_anti_spam.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\map.jpg">
+      <Link>map.jpg</Link>
+    </Resource>
+    <Resource Include="..\obs.png">
+      <Link>obs.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\sentry.png">
+      <Link>sentry.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="heroes.json">

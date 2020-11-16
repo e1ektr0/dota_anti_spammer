@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\E1ektr0\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -13,6 +13,7 @@
           <e p="Hero.cs" t="Include" />
           <e p="Match.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="WardPlaced.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -68,6 +69,14 @@
             <e p="HeroMedium.xaml.cs" t="Include" />
             <e p="HeroSmall.xaml" t="Include" />
             <e p="HeroSmall.xaml.cs" t="Include" />
+          </e>
+          <e p="Map" t="Include">
+            <e p="WardLegend.xaml" t="Include" />
+            <e p="WardLegend.xaml.cs" t="Include" />
+            <e p="WardMap.xaml" t="Include" />
+            <e p="WardMap.xaml.cs" t="Include" />
+            <e p="WardsPanel.xaml" t="Include" />
+            <e p="WardsPanel.xaml.cs" t="Include" />
           </e>
           <e p="Match" t="Include">
             <e p="MatchMedium.xaml" t="Include" />
@@ -348,7 +357,10 @@
           <e p="zuus.png" t="Include" />
         </e>
       </e>
+      <e p="map.jpg" t="Include" />
+      <e p="obs.png" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="sentry.png" t="Include" />
     </e>
     <e p="C:\Users\E1ektr0\Documents\signature.snk" t="Include" />
   </component>

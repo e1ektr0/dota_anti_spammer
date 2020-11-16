@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="DotaAntiSpammerNet.Controls.Map.WardMap"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:map="clr-namespace:DotaAntiSpammerNet.Controls.Map"
+             mc:Ignorable="d" Height="605" Width="605">
+    <Border BorderThickness="5 5 0 0" Name="Border"  BorderBrush="Silver" >
+        <Grid>
+            <Image Source="../../map.jpg" Name="Map" />
+            <Image Source="../../obs.png" Name="Obs" Visibility="Hidden" />
+            <Image Source="../../sentry.png" Name="Sentry" Visibility="Hidden" />
+            <map:CanvasWithBitmap x:Name="Cnv" />
+        </Grid>
+    </Border>
+</UserControl>

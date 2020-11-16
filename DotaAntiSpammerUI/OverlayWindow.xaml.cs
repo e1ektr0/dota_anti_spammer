@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 using DotaAntiSpammerCommon.Models;
@@ -18,7 +20,7 @@ namespace DotaAntiSpammerNet
             if (Width < screenWidth)
             {
                 var windowWidth = Width;
-                Left = (screenWidth / 2) - (windowWidth / 2);
+                Left = screenWidth / 2 - windowWidth / 2;
             }
             else
             {
@@ -60,6 +62,7 @@ namespace DotaAntiSpammerNet
         public void Ini(Match match)
         {
             Match.Ini(match);
+            WardsPanel.Ini(match);
         }
 
         public void ShowHideInvoke()
@@ -84,6 +87,20 @@ namespace DotaAntiSpammerNet
         {
             Dispatcher?.Invoke(Show);
             _notShowedYet = false;
+        }
+
+        public void Map()
+        {
+            if (WardsPanel.Visibility == Visibility.Collapsed)
+            {
+                Match.Visibility = Visibility.Collapsed;
+                WardsPanel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Match.Visibility = Visibility.Visible;
+                WardsPanel.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="DotaAntiSpammerNet.Controls.Map.WardsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:DotaAntiSpammerNet.Controls.Map"
+             mc:Ignorable="d"  >
+    <WrapPanel HorizontalAlignment="Stretch">
+        <local:WardMap Width="495" Height="495" x:Name="Map1"/>
+        <local:WardMap Width="495" Height="495" x:Name="Map2"/>
+        <local:WardMap Width="495" Height="495" x:Name="Map3"/>
+        <local:WardMap Width="495" Height="495" x:Name="Map4"/>
+        <local:WardMap Width="495" Height="495" x:Name="Map5"/>
+        <local:WardLegend Width="495" Height="495" x:Name="WardLegend"/>
+    </WrapPanel>
+</UserControl>

@@ -103,11 +103,16 @@ namespace DotaAntiSpammerLauncher
                     _altPressed = true;
                 }
 
-                if (keys != Keys.Oemtilde || !_altPressed)
-                    return;
-
-                LoadData(_window);
-                _window.ShowHideInvoke();
+                if (keys == Keys.Oemtilde && _altPressed)
+                {
+                    LoadData(_window);
+                    _window.ShowHideInvoke();
+                }
+                
+                if (keys == Keys.M && _altPressed)
+                {
+                    _window.Map();
+                }
             };
             _kbh.OnKeyUnpressed += (sender, keys) =>
             {
@@ -132,13 +137,25 @@ namespace DotaAntiSpammerLauncher
                 Players = new List<Player>()
             };
             var playerIDs = FileManagement.GetPlayerIDs();
+#if DEBUG
+            playerIDs[6] = "905348812";
+            playerIDs[7] = "484431738";
+            playerIDs[8] = "990745381";
+            playerIDs[9] = "77722239";
+#endif
             try
             {
                 var statsUrl = GlobalConfig.ApiUrl + GlobalConfig.StatsUrl;
-                var currentId = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam\ActiveProcess", "ActiveUser",
-                    (int)0);
-                var url = statsUrl + "?accounts=" + string.Join(",", playerIDs) + "&currentId=" + currentId;
-                match.CurrentId = (int)currentId; 
+                var currentId = (long)(int)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam\ActiveProcess", "ActiveUser",
+                    (int) 0);
+                
+#if DEBUG
+                currentId = long.Parse(playerIDs[0]);
+#endif
+                var url = statsUrl + "?accounts=" + string.Join(",", playerIDs) + "&currentId=" + currentId +
+                          "&includeWards=true";
+                
+                match.CurrentId = currentId;
                 var description = new WebClient().DownloadString(url);
                 match = JsonSerializer.Deserialize<Match>(description,
                     new JsonSerializerOptions
@@ -146,16 +163,8 @@ namespace DotaAntiSpammerLauncher
                         PropertyNameCaseInsensitive = true
                     });
                 match.Sort(playerIDs);
-                match.CurrentId = (int)currentId;
+                match.CurrentId = currentId;
 
-                
-//                match.CurrentId = match.Players[1].AccountId;
-//                match.Players[0].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
-//                match.Players[1].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
-//                match.Players[2].Party = new List<long>{match.Players[0].AccountId, match.Players[1].AccountId,match.Players[2].AccountId};
-//                match.Players[3].Party = new List<long>{match.Players[3].AccountId, match.Players[4].AccountId};
-//                match.Players[4].Party = new List<long>{match.Players[3].AccountId, match.Players[4].AccountId};
-                
                 window.Dispatcher.Invoke(() => { window.Ini(match); });
             }
             catch (Exception e)
@@ -163,7 +172,6 @@ namespace DotaAntiSpammerLauncher
                 match.Sort(playerIDs);
                 Console.WriteLine(e);
             }
-
         }
     }
 }

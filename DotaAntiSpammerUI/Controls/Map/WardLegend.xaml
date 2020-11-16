@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DotaAntiSpammerNet.Controls.Map.WardLegend"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/20016"
+             mc:Ignorable="d"
+             Background="Beige" Margin="5 5 0 0"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <DockPanel>
+            <Ellipse Fill="Black" Width="16" Height="16" />
+            <TextBlock>Вард установелен от 1 минуты до 2</TextBlock>
+        </DockPanel>
+
+
+        <DockPanel>
+            <Ellipse Fill="Chartreuse" Width="16" Height="16" />
+            <TextBlock>Вард установелен до 0 секунды</TextBlock>
+        </DockPanel>
+
+        <DockPanel>
+            <Ellipse Fill="Goldenrod" Width="16" Height="16" />
+            <TextBlock>Вард установелен до 20 секунды</TextBlock>
+        </DockPanel>
+
+        <DockPanel>
+            <Ellipse Fill="Brown" Width="16" Height="16" />
+            <TextBlock> Вард установелен до 1 минуты</TextBlock>
+        </DockPanel>
+    </StackPanel>
+</UserControl>

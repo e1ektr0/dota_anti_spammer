@@ -4,14 +4,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:match="clr-namespace:DotaAntiSpammerNet.Controls.Match"
+        xmlns:map="clr-namespace:DotaAntiSpammerNet.Controls.Map"
         mc:Ignorable="d"
         Top = "30"
-        Topmost="True"
+        Topmost="True"    
         Title="OverlayWindow" AllowsTransparency="True" WindowStyle="None" 
-        Height="250" Width="1500">
+        Height="1000" Width="1500">
     <Window.Background>
         <SolidColorBrush Opacity="0" Color="White" />
-    </Window.Background>        
-    <match:MatchMedium x:Name="Match"/>
-
+    </Window.Background>    
+    <StackPanel>
+        <match:MatchMedium x:Name="Match"/>
+        <map:WardsPanel x:Name="WardsPanel" Visibility="Collapsed"/>
+    </StackPanel>
 </Window>

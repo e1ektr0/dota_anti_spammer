@@ -8,7 +8,6 @@ namespace DotaAntiSpammerNet.Common
     {
         private const int GwlExstyle = -20;
         private const int WsExTransparent = 0x00000020;
-
         public static void MakeWindowTransparent(this Window wnd)
         {
             if (!wnd.IsInitialized)
