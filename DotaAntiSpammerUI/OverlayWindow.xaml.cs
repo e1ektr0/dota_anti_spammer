@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Media;
 using DotaAntiSpammerCommon.Models;
 using DotaAntiSpammerNet.Common;
+using DotaAntiSpammerNet.models;
+using DotaAntiSpammerPickDetector;
 
 namespace DotaAntiSpammerNet
 {
     public sealed partial class OverlayWindow
     {
         private bool _notShowedYet;
+        private Match _currentMatch;
 
         public OverlayWindow()
         {
@@ -61,8 +66,8 @@ namespace DotaAntiSpammerNet
 
         public void Ini(Match match)
         {
+            _currentMatch = match;
             Match.Ini(match);
-            WardsPanel.Ini(match);
         }
 
         public void ShowHideInvoke()
@@ -93,14 +98,24 @@ namespace DotaAntiSpammerNet
         {
             if (WardsPanel.Visibility == Visibility.Collapsed)
             {
-                Match.Visibility = Visibility.Collapsed;
+//                Match.Visibility = Visibility.Collapsed;
                 WardsPanel.Visibility = Visibility.Visible;
             }
             else
             {
-                Match.Visibility = Visibility.Visible;
+//                Match.Visibility = Visibility.Visible;
                 WardsPanel.Visibility = Visibility.Collapsed;
             }
+        }
+
+        public void WardIni(List<PlayerWards> pixels)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                if (pixels.Any(n => n.Wards.Any()))
+                    WardsPanel.Ini(_currentMatch, pixels);
+                WardsPanel.Visibility = Visibility.Visible;
+            });
         }
     }
 }

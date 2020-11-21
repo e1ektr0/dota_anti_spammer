@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:DotaAntiSpammerNet.Controls.Map"
              mc:Ignorable="d"  >
     <WrapPanel HorizontalAlignment="Stretch">
-        <local:WardMap Width="495" Height="495" x:Name="Map1"/>
-        <local:WardMap Width="495" Height="495" x:Name="Map2"/>
-        <local:WardMap Width="495" Height="495" x:Name="Map3"/>
-        <local:WardMap Width="495" Height="495" x:Name="Map4"/>
-        <local:WardMap Width="495" Height="495" x:Name="Map5"/>
-        <local:WardLegend Width="495" Height="495" x:Name="WardLegend"/>
+        <local:WardMap Width="460" Height="420" x:Name="Map1"/>
+        <local:WardMap Width="460" Height="420" x:Name="Map2"/>
+        <local:WardMap Width="460" Height="420" x:Name="Map3"/>
+        <local:WardMap Width="460" Height="420" x:Name="Map4"/>
+        <local:WardMap Width="460" Height="420" x:Name="Map5"/>
+        <local:WardLegend Width="460" Height="420" x:Name="WardLegend"/>
     </WrapPanel>
 </UserControl>

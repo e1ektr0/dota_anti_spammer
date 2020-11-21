@@ -16,6 +16,7 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\signature.snk</AssemblyOriginatorKeyFile>
     <PublicSign>false</PublicSign>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -163,6 +164,7 @@
     <Compile Include="Controls\Player\PlayerSmall.xaml.cs">
       <DependentUpon>PlayerSmall.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Page Include="Controls\Bans\Bans.xaml" />
     <Page Include="Controls\Hero\Hero.xaml" />
     <Page Include="Controls\Hero\HeroMedium.xaml" />
@@ -212,125 +214,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <Resource Include="icons\void_spirit.png" />
-    <Resource Include="small\abaddon.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="small\abyssal_underlord.png" />
-    <Resource Include="small\alchemist.png" />
-    <Resource Include="small\ancient_apparition.png" />
-    <Resource Include="small\antimage.png" />
-    <Resource Include="small\arc_warden.png" />
-    <Resource Include="small\axe.png" />
-    <Resource Include="small\bane.png" />
-    <Resource Include="small\batrider.png" />
-    <Resource Include="small\beastmaster.png" />
-    <Resource Include="small\bloodseeker.png" />
-    <Resource Include="small\bounty_hunter.png" />
-    <Resource Include="small\brewmaster.png" />
-    <Resource Include="small\bristleback.png" />
-    <Resource Include="small\broodmother.png" />
-    <Resource Include="small\centaur.png" />
-    <Resource Include="small\chaos_knight.png" />
-    <Resource Include="small\chen.png" />
-    <Resource Include="small\clinkz.png" />
-    <Resource Include="small\crystal_maiden.png" />
-    <Resource Include="small\dark_seer.png" />
-    <Resource Include="small\dark_willow.png" />
-    <Resource Include="small\dazzle.png" />
-    <Resource Include="small\death_prophet.png" />
-    <Resource Include="small\disruptor.png" />
-    <Resource Include="small\doom_bringer.png" />
-    <Resource Include="small\dragon_knight.png" />
-    <Resource Include="small\drow_ranger.png" />
-    <Resource Include="small\earthshaker.png" />
-    <Resource Include="small\earth_spirit.png" />
-    <Resource Include="small\elder_titan.png" />
-    <Resource Include="small\ember_spirit.png" />
-    <Resource Include="small\enchantress.png" />
-    <Resource Include="small\enigma.png" />
-    <Resource Include="small\faceless_void.png" />
-    <Resource Include="small\furion.png" />
-    <Resource Include="small\grimstroke.png" />
-    <Resource Include="small\gyrocopter.png" />
-    <Resource Include="small\huskar.png" />
-    <Resource Include="small\invoker.png" />
-    <Resource Include="small\jakiro.png" />
-    <Resource Include="small\juggernaut.png" />
-    <Resource Include="small\keeper_of_the_light.png" />
-    <Resource Include="small\kunkka.png" />
-    <Resource Include="small\legion_commander.png" />
-    <Resource Include="small\leshrac.png" />
-    <Resource Include="small\lich.png" />
-    <Resource Include="small\life_stealer.png" />
-    <Resource Include="small\lina.png" />
-    <Resource Include="small\lion.png" />
-    <Resource Include="small\lone_druid.png" />
-    <Resource Include="small\luna.png" />
-    <Resource Include="small\lycan.png" />
-    <Resource Include="small\magnataur.png" />
-    <Resource Include="small\mars.png" />
-    <Resource Include="small\medusa.png" />
-    <Resource Include="small\meepo.png" />
-    <Resource Include="small\mirana.png" />
-    <Resource Include="small\monkey_king.png" />
-    <Resource Include="small\morphling.png" />
-    <Resource Include="small\naga_siren.png" />
-    <Resource Include="small\necrolyte.png" />
-    <Resource Include="small\nevermore.png" />
-    <Resource Include="small\night_stalker.png" />
-    <Resource Include="small\nyx_assassin.png" />
-    <Resource Include="small\obsidian_destroyer.png" />
-    <Resource Include="small\ogre_magi.png" />
-    <Resource Include="small\omniknight.png" />
-    <Resource Include="small\oracle.png" />
-    <Resource Include="small\pangolier.png" />
-    <Resource Include="small\phantom_assassin.png" />
-    <Resource Include="small\phantom_lancer.png" />
-    <Resource Include="small\phoenix.png" />
-    <Resource Include="small\puck.png" />
-    <Resource Include="small\pudge.png" />
-    <Resource Include="small\pugna.png" />
-    <Resource Include="small\queenofpain.png" />
-    <Resource Include="small\rattletrap.png" />
-    <Resource Include="small\razor.png" />
-    <Resource Include="small\riki.png" />
-    <Resource Include="small\rubick.png" />
-    <Resource Include="small\sand_king.png" />
-    <Resource Include="small\shadow_demon.png" />
-    <Resource Include="small\shadow_shaman.png" />
-    <Resource Include="small\shredder.png" />
-    <Resource Include="small\silencer.png" />
-    <Resource Include="small\skeleton_king.png" />
-    <Resource Include="small\skywrath_mage.png" />
-    <Resource Include="small\slardar.png" />
-    <Resource Include="small\slark.png" />
-    <Resource Include="small\sniper.png" />
-    <Resource Include="small\spectre.png" />
-    <Resource Include="small\spirit_breaker.png" />
-    <Resource Include="small\storm_spirit.png" />
-    <Resource Include="small\sven.png" />
-    <Resource Include="small\techies.png" />
-    <Resource Include="small\templar_assassin.png" />
-    <Resource Include="small\terrorblade.png" />
-    <Resource Include="small\tidehunter.png" />
-    <Resource Include="small\tinker.png" />
-    <Resource Include="small\tiny.png" />
-    <Resource Include="small\treant.png" />
-    <Resource Include="small\troll_warlord.png" />
-    <Resource Include="small\tusk.png" />
-    <Resource Include="small\undying.png" />
-    <Resource Include="small\ursa.png" />
-    <Resource Include="small\vengefulspirit.png" />
-    <Resource Include="small\venomancer.png" />
-    <Resource Include="small\viper.png" />
-    <Resource Include="small\visage.png" />
-    <Resource Include="small\warlock.png" />
-    <Resource Include="small\weaver.png" />
-    <Resource Include="small\windrunner.png" />
-    <Resource Include="small\winter_wyvern.png" />
-    <Resource Include="small\wisp.png" />
-    <Resource Include="small\witch_doctor.png" />
-    <Resource Include="small\zuus.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons\morphling.png" />
@@ -472,6 +355,9 @@
       <Link>sentry.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="..\mine.png">
+      <Link>mine.png</Link>
+    </Resource>
     <Content Include="heroes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -483,6 +369,10 @@
     <ProjectReference Include="..\DotaAntiSpammerCommon\DotaAntiSpammerCommon.csproj">
       <Project>{800e34fb-eeef-4f43-a8a5-0dabfa590bc6}</Project>
       <Name>DotaAntiSpammerCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotaAntiSpammerPickDetector\DotaAntiSpammerPickDetector.csproj">
+      <Project>{979551f3-7c38-4b14-924a-2a80e29c3a8a}</Project>
+      <Name>DotaAntiSpammerPickDetector</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

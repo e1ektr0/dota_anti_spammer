@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Media;
 using DotaAntiSpammerNet.Controls.Player;
 
@@ -14,6 +15,9 @@ namespace DotaAntiSpammerNet.Controls.Match
 
         public void Ini(DotaAntiSpammerCommon.Models.Match match)
         {
+            BorderA.BorderBrush = Brushes.Transparent;
+            BorderB.BorderBrush = Brushes.Transparent;
+            
             if (match?.Players == null)
                 return;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Windows;
+using DotaAntiSpammerCommon.Models;
 
 namespace DotaAntiSpammerNet.Controls.Map
 {
@@ -18,26 +18,22 @@ namespace DotaAntiSpammerNet.Controls.Map
                 Map4,
                 Map5,
             };
-            
-            
         }
 
-        public void Ini(DotaAntiSpammerCommon.Models.Match match)
+        public void Ini(DotaAntiSpammerCommon.Models.Match match, List<PlayerWards> pixels)
         {
-            var x = 0;
             foreach (var wardMap in _wardMaps)
             {
                 wardMap.Visibility = Visibility.Collapsed;
             }
-            
-            for (var i = 0; i < match.Players.Count; i++)
-            {
-                var matchPlayer = match.Players[i];
-                if(matchPlayer?.WardResults == null || !matchPlayer.WardResults.Any())
-                    continue;
 
-                _wardMaps[x].Ini(i, matchPlayer.WardResults);
-                x++;
+            int i = 0;
+            foreach (var playerWards in pixels)
+            {
+                
+                var index = match.Players.FindIndex(n => n.AccountId == playerWards.AccountId);
+                _wardMaps[i].Ini(index, playerWards.Wards, playerWards.HeroId);
+                i++;
             }
         }
     }

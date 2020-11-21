@@ -13,5 +13,6 @@ namespace DotaAntiSpammerCommon
         }
 
         public static string StatsUrl { get; } = "/stats";
+        public static string WardsUrl { get; } = "/stats/wards";
     }
 }

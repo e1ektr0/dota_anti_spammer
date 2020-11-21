@@ -46,6 +46,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -102,6 +106,10 @@
       <Project>{800e34fb-eeef-4f43-a8a5-0dabfa590bc6}</Project>
       <Name>DotaAntiSpammerCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DotaAntiSpammerPickDetector\DotaAntiSpammerPickDetector.csproj">
+      <Project>{979551f3-7c38-4b14-924a-2a80e29c3a8a}</Project>
+      <Name>DotaAntiSpammerPickDetector</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DotaAntiSpammerUI\DotaAntiSpammerUI.csproj">
       <Project>{cc85a943-db01-43f7-b643-1db97d1024a3}</Project>
       <Name>DotaAntiSpammerUI</Name>
@@ -111,6 +119,8 @@
     <None Include="..\..\signature.snk">
       <Link>signature.snk</Link>
     </None>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="dota_anti_spam.ico">

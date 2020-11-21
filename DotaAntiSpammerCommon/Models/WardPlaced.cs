@@ -7,7 +7,8 @@
         public int X { get; set; }
         public int Y { get; set; }
         public double VecX { get; set; }
+        public bool Mine { get; set; }
         public double VecY { get; set; }
-        public int HeroId { get; set; }
+        public long MatchId { get; set; }
     }
 }
