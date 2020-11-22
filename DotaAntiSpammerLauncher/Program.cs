@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace DotaAntiSpammerLauncher
         private static FileSystemWatcher _watcher;
         private static Match _currentMatch;
         private static Match _currentMatchForPicks;
+        private static List<HeroPixelWithPosition> _currentPicks;
 
         private static void RunPickDetect()
         {
@@ -37,11 +39,15 @@ namespace DotaAntiSpammerLauncher
             {
                 try
                 {
-                    if (_window == null || _window.Visibility != Visibility.Visible ||
-                        _currentMatch == _currentMatchForPicks)
+                    if (_window == null || _window.Visibility != Visibility.Visible)
                     {
                         Thread.Sleep(5000);
                         continue;
+                    }
+
+                    if (_currentMatch != _currentMatchForPicks)
+                    {
+                        _currentPicks = null;
                     }
 
                     var makeScreenShot = PickDetector.MakeScreenShot();
@@ -50,17 +56,39 @@ namespace DotaAntiSpammerLauncher
                     if (heroPixel.Count == 10)
                     {
                         _currentMatchForPicks = _currentMatch;
+
                         pickDetector.DetectPicks(heroPixel);
-                        if (heroPixel.Any(n => n.Name != null))
+                        if (_currentPicks == null)
+                            _currentPicks = heroPixel;
+                        else
+                        {
+                            for (var i = 0; i < heroPixel.Count; i++)
+                            {
+                                if (_currentPicks.Count <= i)
+                                {
+                                    _currentPicks.Add(heroPixel[i]);
+                                }
+                                else
+                                {
+                                    if (_currentPicks[i].Name == null ||
+                                        _currentPicks[i].Distance < heroPixel[i].Distance)
+                                        _currentPicks[i] = heroPixel[i];
+                                }
+                            }
+                        }
+
+
+                        if (_currentPicks.Any(n => n.Name != null))
                         {
                             var list = new List<PlayerPick>();
                             for (var i = 0; i < _currentMatch.Players.Count; i++)
                             {
-                                var pixel = heroPixel[i];
+                                var pixel = _currentPicks[i];
                                 if (pixel.Name == null)
                                     continue;
-                                var heroConfig = HeroConfigAll.Instance.Heroes.FirstOrDefault(n => n.Name == pixel.Name);
-                                if(heroConfig == null)
+                                var heroConfig =
+                                    HeroConfigAll.Instance.Heroes.FirstOrDefault(n => n.Name == pixel.Name);
+                                if (heroConfig == null)
                                     continue;
                                 var player = _currentMatch.Players[i];
                                 if (player != null)

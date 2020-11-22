@@ -6,7 +6,7 @@
         xmlns:match="clr-namespace:DotaAntiSpammerNet.Controls.Match"
         xmlns:map="clr-namespace:DotaAntiSpammerNet.Controls.Map"
         mc:Ignorable="d"
-        Top = "30"
+        Top = "90"
         Topmost="True"    
         Title="OverlayWindow" AllowsTransparency="True" WindowStyle="None" 
         Height="1000" Width="1500">

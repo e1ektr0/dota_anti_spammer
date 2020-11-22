@@ -21,6 +21,7 @@ namespace DotaAntiSpammerPickDetector
         public int StartPosition { get; }
         public int EndPosition { get; set; }
         public int H { get; set; }
+        public long Distance { get; set; }
 
         public HeroPixelWithPosition(int startPosition)
         {
@@ -312,8 +313,11 @@ namespace DotaAntiSpammerPickDetector
 
                 var orderedEnumerable = distances.OrderBy(n => n.Min);
                 var distance = orderedEnumerable.First();
-                if(distance.Min<7000)
+                if (distance.Min < 7000)
+                {
                     heroPixel.Name = distance.HeroPixelWithPosition.Name;
+                    heroPixel.Distance = distance.Min;
+                }
                 Console.WriteLine(heroPixel.Name + distance.Min);
             }
         }
