@@ -312,9 +312,9 @@ namespace DotaAntiSpammerPickDetector
 
                 var orderedEnumerable = distances.OrderBy(n => n.Min);
                 var distance = orderedEnumerable.First();
-                if(distance.Min<1000)
+                if(distance.Min<7000)
                     heroPixel.Name = distance.HeroPixelWithPosition.Name;
-//                Console.WriteLine(heroPixel.Name + distance.Min);
+                Console.WriteLine(heroPixel.Name + distance.Min);
             }
         }
     }

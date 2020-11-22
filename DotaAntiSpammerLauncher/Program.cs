@@ -59,14 +59,17 @@ namespace DotaAntiSpammerLauncher
                                 var pixel = heroPixel[i];
                                 if (pixel.Name == null)
                                     continue;
-                                var heroConfig = HeroConfigAll.Instance.Heroes.First(n => n.Name == pixel.Name);
+                                var heroConfig = HeroConfigAll.Instance.Heroes.FirstOrDefault(n => n.Name == pixel.Name);
+                                if(heroConfig == null)
+                                    continue;
                                 var player = _currentMatch.Players[i];
-                                list.Add(new PlayerPick
-                                {
-                                    AccountId = player.AccountId,
-                                    HeroId = heroConfig.Id,
-                                    Radiant = i < 5
-                                });
+                                if (player != null)
+                                    list.Add(new PlayerPick
+                                    {
+                                        AccountId = player.AccountId,
+                                        HeroId = heroConfig.Id,
+                                        Radiant = i < 5
+                                    });
                             }
 
                             var currentId = (long) (int) Registry.GetValue(
@@ -224,12 +227,12 @@ namespace DotaAntiSpammerLauncher
                 Players = new List<Player>()
             };
             var playerIDs = FileManagement.GetPlayerIDs();
-#if DEBUG
-            playerIDs[0] = "215826874";
-            playerIDs[1] = "484431738";
-            playerIDs[2] = "1018432408";
-            playerIDs[3] = "139287706";
-#endif
+// #if DEBUG
+//             playerIDs[0] = "215826874";
+//             playerIDs[1] = "484431738";
+//             playerIDs[2] = "1018432408";
+//             playerIDs[3] = "139287706";
+// #endif
             try
             {
                 var statsUrl = GlobalConfig.ApiUrl + GlobalConfig.StatsUrl;
@@ -237,9 +240,9 @@ namespace DotaAntiSpammerLauncher
                     "ActiveUser",
                     (int) 0);
 
-#if DEBUG
-                currentId = long.Parse(playerIDs[6]);
-#endif
+// #if DEBUG
+//                 currentId = long.Parse(playerIDs[6]);
+// #endif
                 var url = statsUrl + "?accounts=" + string.Join(",", playerIDs) + "&currentId=" + currentId +
                           "&includeWards=true";
 
@@ -255,41 +258,41 @@ namespace DotaAntiSpammerLauncher
                 _currentMatch = match;
                 window.Dispatcher.Invoke(() => { window.Ini(match); });
 
-#if DEBUG
-                Task.Run(() =>
-                {
-                    try
-                    {
-                        RequestWards(new List<PlayerPick>
-                        {
-                            
-                            new PlayerPick
-                            {
-                                HeroId = 17,
-                                Radiant = true,
-                                AccountId = 215826874
-                            },
-                            new PlayerPick
-                            {
-                                HeroId = 105,
-                                Radiant = true,
-                                AccountId = 1018432408
-                            },
-                            new PlayerPick
-                            {
-                                HeroId = 91,
-                                Radiant = true,
-                                AccountId = 139287706
-                            },
-                        });
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e);
-                        throw;
-                    }
-                });
-#endif
+// #if DEBUG
+//                 Task.Run(() =>
+//                 {
+//                     try
+//                     {
+//                         RequestWards(new List<PlayerPick>
+//                         {
+//                             
+//                             new PlayerPick
+//                             {
+//                                 HeroId = 17,
+//                                 Radiant = true,
+//                                 AccountId = 215826874
+//                             },
+//                             new PlayerPick
+//                             {
+//                                 HeroId = 105,
+//                                 Radiant = true,
+//                                 AccountId = 1018432408
+//                             },
+//                             new PlayerPick
+//                             {
+//                                 HeroId = 91,
+//                                 Radiant = true,
+//                                 AccountId = 139287706
+//                             },
+//                         });
+//                     }
+//                     catch (Exception e)
+//                     {
+//                         Console.WriteLine(e);
+//                         throw;
+//                     }
+//                 });
+// #endif
             }
             catch (Exception e)
             {

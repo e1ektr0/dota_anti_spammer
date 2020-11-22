@@ -112,8 +112,7 @@ namespace DotaAntiSpammerNet
         {
             Dispatcher.Invoke(() =>
             {
-                if (pixels.Any(n => n.Wards.Any()))
-                    WardsPanel.Ini(_currentMatch, pixels);
+                WardsPanel.Ini(_currentMatch, pixels.Where(n => n.Wards.Any()).ToList());
                 WardsPanel.Visibility = Visibility.Visible;
             });
         }
