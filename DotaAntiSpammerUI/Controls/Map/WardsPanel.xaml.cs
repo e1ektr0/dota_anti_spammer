@@ -31,7 +31,7 @@ namespace DotaAntiSpammerNet.Controls.Map
             foreach (var playerWards in pixels)
             {
                 
-                var index = match.Players.FindIndex(n => n.AccountId == playerWards.AccountId);
+                var index = match.Players.FindIndex(n => n?.AccountId == playerWards.AccountId);
                 _wardMaps[i].Ini(index, playerWards.Wards, playerWards.HeroId);
                 i++;
             }
