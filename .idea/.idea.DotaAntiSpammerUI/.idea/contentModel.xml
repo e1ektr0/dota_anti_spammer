@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\feofi\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\feofi\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_DotaAntiSpammer.-2060908404.00" t="ExcludeRecursive" />
+    <e p="C:\Users\feofi\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\feofi\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DotaAntiSpammerUI.1468542944.00" t="ExcludeRecursive" />
     <e p="C:\Users\feofi\Documents\dota\dota_anti_spammer" t="IncludeFlat">
-      <e p="DotaAntiSpammer.sln" t="IncludeFlat" />
       <e p="DotaAntiSpammerCommon" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DotaAntiSpammerCommon.csproj" t="IncludeRecursive" />
@@ -310,6 +309,7 @@
           <e p="Resources.resx" t="Include" />
         </e>
       </e>
+      <e p="DotaAntiSpammerUI.sln" t="IncludeFlat" />
       <e p="map.jpg" t="Include" />
       <e p="mine.png" t="Include" />
       <e p="obs.png" t="Include" />
